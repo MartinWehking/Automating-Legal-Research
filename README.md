@@ -21,6 +21,11 @@ python tool.py --config=config.json --out=dataset.csv
 ```
 Dataset is now saved as dataset.csv.
 
+Search dataset for "travel expenses" using TF-IDF for the vector space:
+```
+python3 tool.py --dataset=dataset.csv --tfidf --search="travel expenses"
+```
+
 Generate vector space using TF-IDF, cluster using kmeans and visualize results:
 ```
 python3 tool.py --dataset=dataset.csv --tfidf --cluster --algorithm=kmeans --visualize
