@@ -15,7 +15,7 @@ To find out about the available options simply start it with ```python tool.py -
 
 ## Examples
 
-Creating a dataset using the default config with all legal texts from [gesetze-im-internet.de](gesetze-im-internet.de). Tipp: you can remove unneeded URLs/legal texts from the config in order to reduce the time needed to fetch the data and reduce the computation time of later steps.
+Creating a dataset using the default config with all legal texts from [gesetze-im-internet.de](gesetze-im-internet.de). Hint: you can remove unneeded URLs/legal texts from the config in order to reduce the time needed to fetch the data and reduce the computation time of later steps.
 ```
 python tool.py --config=config.json --out=dataset.csv
 ```
@@ -23,30 +23,30 @@ Dataset is now saved as dataset.csv.
 
 Search dataset for "travel expenses" using TF-IDF for the vector space:
 ```
-python3 tool.py --dataset=dataset.csv --tfidf --search="travel expenses"
+python tool.py --dataset=dataset.csv --tfidf --search="travel expenses"
 ```
 
 Generate vector space using TF-IDF, cluster using kmeans and visualize results:
 ```
-python3 tool.py --dataset=dataset.csv --tfidf --cluster --algorithm=kmeans --visualize
+python tool.py --dataset=dataset.csv --tfidf --cluster --algorithm=kmeans --visualize
 ```
 
 Use Doc2Vec for vector space instead (worse results):
 ```
-python3 tool.py --dataset=dataset.csv --doc2vec --cluster --algorithm=kmeans --visualize
+python tool.py --dataset=dataset.csv --doc2vec --cluster --algorithm=kmeans --visualize
 ```
 
 Use HAC for clustering instead (worse results):
 ```
-python3 tool.py --dataset=dataset.csv --tfidf --cluster --algorithm=HAC --visualize
+python tool.py --dataset=dataset.csv --tfidf --cluster --algorithm=HAC --visualize
 ```
 
 Use TF-IDF for the vector space and classify results:
 ```
-python3 tool.py --dataset=dataset.csv --tfidf --classify
+python tool.py --dataset=dataset.csv --tfidf --classify
 ```
 
 Use Doc2Vec for vector space instead (worse results):
 ```
-python3 tool.py --dataset=dataset.csv --doc2vec --classify
+python tool.py --dataset=dataset.csv --doc2vec --classify
 ```
